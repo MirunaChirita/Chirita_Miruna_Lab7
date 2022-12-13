@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using SQLiteNetExtensions.Attributes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,9 @@ namespace Chirita_Miruna_Lab7.Models
 
         public string Description { get; set; }
         public DateTime Date { get; set; }
+
+        [ForeignKey(typeof(Shop))]
+        public int ShopID { get; set; }
 
     }
 }
